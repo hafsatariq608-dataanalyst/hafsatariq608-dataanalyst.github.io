@@ -1,16 +1,16 @@
 /* --- Dark Theme & Minimalist Design Tokens --- */
 :root {
-  --bg-canvas: #0F172A;        /* Slate Dark Background */
-  --card-bg: #1E293B;          /* Dark Minimal Card Background */
-  --text-primary: #F8FAFC;     /* Bright White Text */
-  --text-muted: #94A3B8;       /* Muted Gray Text */
-  --accent-glow: #38BDF8;      /* Electric Cyan Accent */
-  --cta-button: #2563EB;       /* Deep Blue CTA */
-  --border-color: #334155;     /* Dark Border Line */
+  --bg-canvas: #0F172A !important;        /* Dark Slate Canvas */
+  --card-bg: #1E293B !important;          /* Dark Minimal Card Fill */
+  --text-primary: #F8FAFC !important;     /* Bright Off-White Text */
+  --text-muted: #94A3B8 !important;       /* Slate Gray Text */
+  --accent-glow: #38BDF8 !important;      /* Electric Cyan Accent */
+  --cta-button: #2563EB !important;       /* Accent Blue CTA */
+  --border-color: #334155 !important;     /* Dark Slate Border */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* --- Global Canvas & Reset --- */
+/* --- Global Reset & Smooth Scrolling --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,13 +19,15 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-canvas);
 }
 
 body {
-  background-color: var(--bg-canvas);
-  color: var(--text-primary);
+  background-color: var(--bg-canvas) !important;
+  color: var(--text-primary) !important;
   font-family: var(--font-family);
   line-height: 1.6;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -72,6 +74,7 @@ body {
   padding: 6px 12px;
   border-radius: 6px;
   background: var(--card-bg);
+  color: var(--text-primary) !important;
 }
 
 /* --- Hero Section & Entrance Animation --- */
@@ -111,23 +114,24 @@ body {
 
 .btn-primary {
   background-color: var(--cta-button);
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   padding: 12px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
   background-color: #1D4ED8;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.25);
 }
 
 .btn-outline {
   border: 1px solid var(--border-color);
-  color: var(--text-primary);
+  color: var(--text-primary) !important;
   padding: 12px 20px;
   border-radius: 8px;
   text-decoration: none;
@@ -156,7 +160,7 @@ body {
   color: var(--text-primary);
 }
 
-/* --- Animated Minimalist Cards --- */
+/* --- Card Grid & Animation Effects --- */
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -172,9 +176,9 @@ body {
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   border-color: var(--accent-glow);
-  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.1);
+  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.2);
 }
 
 .card-header h3 {
@@ -264,7 +268,7 @@ body {
   color: var(--accent-glow);
 }
 
-/* --- Keyframe Animations --- */
+/* --- Keyframes --- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
