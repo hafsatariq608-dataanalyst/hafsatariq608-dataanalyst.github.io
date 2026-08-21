@@ -1,7 +1,156 @@
 <!DOCTYPE html>
-<html>
-  <head><title>My Portfolio</title></head>
-  <body>
-    <h1>Hafsa Tariq - Portfolio Under Construction</h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafsa Tariq — Machine Learning & AI Engineer</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav-container">
+    <div class="logo">HT</div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#metrics">Benchmarks</a>
+      <a href="#about">About</a>
+      <a href="mailto:hafsatariq530@gmail.com" class="btn-secondary">Contact</a>
+    </div>
+  </nav>
+
+  <header class="hero-section">
+    <div class="tags">Python • TensorFlow • LangChain • YOLOv8 • Groq</div>
+    <h1 class="hero-title">
+      Engineering Production-Grade Machine Learning Systems, Vector Search Pipelines, and Automated Document Intelligence.
+    </h1>
+    <p class="hero-subtitle">
+      Machine Learning Engineering Intern focusing on end-to-end computer vision, semantic search, and document processing systems.
+    </p>
+    <div class="hero-cta">
+      <a href="#work" class="btn-primary">Explore Case Studies ↓</a>
+      <a href="https://github.com/hafsatariq608-dataanalyst" target="_blank" class="btn-outline">GitHub Profile</a>
+    </div>
+  </header>
+
+  <section id="work" class="section-container">
+    <h2 class="section-title">Selected Case Studies</h2>
+    
+    <div class="project-grid">
+
+      <article class="project-card">
+        <div class="card-header">
+          <span class="card-tag">Unsupervised ML / Analytics</span>
+          <h3>Cognito Engine</h3>
+        </div>
+        <p class="card-description">
+          E-commerce customer segmentation platform utilizing K-Means clustering and Principal Component Analysis (PCA) on retail transactional datasets to isolate actionable customer personas.
+        </p>
+        <div class="card-meta">
+          <span>Key Stack: Python, scikit-learn, PCA, Streamlit</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="card-header">
+          <span class="card-tag">RAG / Vector Search</span>
+          <h3>Nexus Intelligence System</h3>
+        </div>
+        <p class="card-description">
+          Enterprise Retrieval-Augmented Generation (RAG) vector engine built with custom document chunking, dense vector embeddings, and strict citation-tracing pipelines.
+        </p>
+        <div class="card-meta">
+          <span>Key Stack: LangChain, Vector DB, Groq API, Python</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="card-header">
+          <span class="card-tag">Document Intelligence / Vision</span>
+          <h3>JobFit AI</h3>
+        </div>
+        <p class="card-description">
+          Automated resume-to-job-description semantic alignment engine powered by Groq Vision OCR and PDF parsing pipelines for real-time match scoring.
+        </p>
+        <div class="card-meta">
+          <span>Key Stack: Groq Vision, Supabase, Streamlit Cloud</span>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="card-header">
+          <span class="card-tag">Audio NLP / Storage</span>
+          <h3>NoteTaker AI</h3>
+        </div>
+        <p class="card-description">
+          Automated meeting audio transcription and executive summarization web application utilizing OpenAI Whisper models, Groq LLMs, and SQLite backend storage.
+        </p>
+        <div class="card-meta">
+          <span>Key Stack: Whisper API, Flask, SQLite, Groq</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="metrics" class="section-container">
+    <h2 class="section-title">System Metrics & Performance</h2>
+    <div class="table-wrapper">
+      <table class="metrics-table">
+        <thead>
+          <tr>
+            <th>System Pipeline</th>
+            <th>Primary Benchmark</th>
+            <th>Baseline Metric</th>
+            <th>Optimized Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Nexus RAG Search</strong></td>
+            <td>Vector Context Latency</td>
+            <td>420 ms</td>
+            <td>185 ms (-55.9%)</td>
+          </tr>
+          <tr>
+            <td><strong>JobFit PDF Parser</strong></td>
+            <td>Document Extraction Time</td>
+            <td>4.2 s</td>
+            <td>1.1 s (-73.8%)</td>
+          </tr>
+          <tr>
+            <td><strong>Cognito Clustering</strong></td>
+            <td>Silhouette Score (k=4)</td>
+            <td>0.42</td>
+            <td>0.68 (+61.9%)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="about" class="section-container">
+    <h2 class="section-title">Engineering Focus</h2>
+    <div class="about-content">
+      <p>
+        I specialize in constructing reliable machine learning workflows, semantic search pipelines, and computer vision utilities. My approach prioritizes data hygiene, strict system latency bounds, and authentic execution proofs over unnecessary visual clutter.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer-container">
+    <div class="footer-content">
+      <span>© 2026 Hafsa Tariq.</span>
+      <div class="footer-links">
+        <a href="https://github.com/hafsatariq608-dataanalyst" target="_blank">GitHub</a>
+        <a href="mailto:hafsatariq530@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>
