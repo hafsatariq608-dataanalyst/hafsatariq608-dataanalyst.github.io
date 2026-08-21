@@ -1,18 +1,24 @@
+/* --- Dark Theme & Minimalist Design Tokens --- */
 :root {
-  --bg-canvas: #FAFAFA;
-  --text-primary: #141414;
-  --text-muted: #666666;
-  --accent-link: #1F4FD1;
-  --cta-button: #2F6FED;
-  --border-color: #E5E5E5;
-  --card-bg: #FFFFFF;
+  --bg-canvas: #0F172A;        /* Slate Dark Background */
+  --card-bg: #1E293B;          /* Dark Minimal Card Background */
+  --text-primary: #F8FAFC;     /* Bright White Text */
+  --text-muted: #94A3B8;       /* Muted Gray Text */
+  --accent-glow: #38BDF8;      /* Electric Cyan Accent */
+  --cta-button: #2563EB;       /* Deep Blue CTA */
+  --border-color: #334155;     /* Dark Border Line */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* --- Global Canvas & Reset --- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* --- Layout Containers --- */
 .nav-container,
 .hero-section,
 .section-container,
@@ -32,6 +39,7 @@ body {
   padding: 0 24px;
 }
 
+/* --- Navigation --- */
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -43,14 +51,20 @@ body {
 .logo {
   font-weight: 700;
   font-size: 18px;
+  color: var(--accent-glow);
 }
 
 .nav-links a {
-  color: var(--text-primary);
+  color: var(--text-muted);
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
 }
 
 .btn-secondary {
@@ -60,16 +74,19 @@ body {
   background: var(--card-bg);
 }
 
+/* --- Hero Section & Entrance Animation --- */
 .hero-section {
   padding-top: 40px;
   padding-bottom: 80px;
+  animation: fadeInUp 0.8s ease-out forwards;
 }
 
 .tags {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  color: var(--accent-glow);
   margin-bottom: 16px;
 }
 
@@ -78,6 +95,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 16px;
+  color: var(--text-primary);
 }
 
 .hero-subtitle {
@@ -99,6 +117,12 @@ body {
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background-color: #1D4ED8;
 }
 
 .btn-outline {
@@ -110,8 +134,15 @@ body {
   font-weight: 600;
   font-size: 14px;
   background: var(--card-bg);
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
+.btn-outline:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-glow);
+}
+
+/* --- Section Layout --- */
 .section-container {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -122,8 +153,10 @@ body {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 32px;
+  color: var(--text-primary);
 }
 
+/* --- Animated Minimalist Cards --- */
 .project-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -135,6 +168,13 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 24px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-glow);
+  box-shadow: 0 10px 25px -5px rgba(56, 189, 248, 0.1);
 }
 
 .card-header h3 {
@@ -142,25 +182,31 @@ body {
   font-weight: 600;
   margin-top: 4px;
   margin-bottom: 12px;
+  color: var(--text-primary);
 }
 
 .card-tag {
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--cta-button);
+  color: var(--accent-glow);
+  letter-spacing: 0.05em;
 }
 
 .card-description {
   font-size: 15px;
+  color: var(--text-muted);
   margin-bottom: 16px;
 }
 
 .card-meta {
   font-size: 13px;
   color: var(--text-muted);
+  border-top: 1px dashed var(--border-color);
+  padding-top: 12px;
 }
 
+/* --- Metrics Table --- */
 .table-wrapper {
   overflow-x: auto;
 }
@@ -182,12 +228,18 @@ body {
 }
 
 .metrics-table th {
-  background-color: #F0F0F0;
+  background-color: #0F172A;
+  color: var(--accent-glow);
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
 }
 
+.metrics-table td {
+  color: var(--text-primary);
+}
+
+/* --- Footer --- */
 .footer-container {
   padding-top: 40px;
   padding-bottom: 60px;
@@ -205,4 +257,21 @@ body {
   color: var(--text-muted);
   text-decoration: none;
   margin-left: 16px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-glow);
+}
+
+/* --- Keyframe Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
